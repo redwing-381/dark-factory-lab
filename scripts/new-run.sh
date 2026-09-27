@@ -22,7 +22,20 @@ cp "$LAB"/mandates/*.md "$dest/mandates/"
 cp -R "$LAB"/skills/* "$dest/.claude/skills/"
 [[ "${2:-}" == --with-scaffold ]] && cp "$HOME/dark-factory/dark-factory-wearedevs/scaffold/"* "$dest/stage-1/"
 touch "$dest/stage-1/.gitkeep"
-printf '__pycache__/\n*.pyc\n.venv/\n.pytest_cache/\n*.db\n.env\n' > "$dest/.gitignore"
+printf '__pycache__/\n*.pyc\n.venv/\n.pytest_cache/\n*.db\n.env\n.claude/settings.local.json\n' > "$dest/.gitignore"
+# Seats may read the organizers' kit (specs, harness) and write harness reports outside their
+# working dir. Band owns the claude command line (no --add-dir), so grant it via local project
+# settings. Machine-specific, so it is gitignored and documented in FACTORY.md instead.
+cat > "$dest/.claude/settings.local.json" <<JSON
+{
+  "permissions": {
+    "additionalDirectories": [
+      "$HOME/dark-factory/dark-factory-wearedevs",
+      "$HOME/dark-factory/band-work/checks"
+    ]
+  }
+}
+JSON
 
 git -C "$dest" init -q -b main
 git -C "$dest" add -A
