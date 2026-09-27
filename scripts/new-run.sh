@@ -20,6 +20,8 @@ fi
 mkdir -p "$dest/stage-1" "$dest/.claude/skills" "$dest/mandates"
 cp "$LAB"/mandates/*.md "$dest/mandates/"
 cp -R "$LAB"/skills/* "$dest/.claude/skills/"
+# Autonomy guard (committed, generic): seats cannot ask the human or schedule/notify outside the room.
+cp "$LAB/factory-config/settings.json" "$dest/.claude/settings.json"
 [[ "${2:-}" == --with-scaffold ]] && cp "$HOME/dark-factory/dark-factory-wearedevs/scaffold/"* "$dest/stage-1/"
 touch "$dest/stage-1/.gitkeep"
 printf '__pycache__/\n*.pyc\n.venv/\n.pytest_cache/\n*.db\n.env\n.claude/settings.local.json\n' > "$dest/.gitignore"

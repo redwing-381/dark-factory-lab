@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "deny": [
+      "AskUserQuestion",
+      "mcp__jam__AskUserQuestion",
+      "PushNotification",
+      "RemoteTrigger",
+      "CronCreate",
+      "ScheduleWakeup"
+    ]
+  }
+}
