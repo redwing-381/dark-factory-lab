@@ -17,6 +17,19 @@
 - Coordinator posted an acknowledgement addressed to the human at start. Harmless (not a question) but noise → consider mandate tweak: address the human only in the final report.
 - `__pycache__` left in stage-1 working tree (gitignored, fine).
 
-## Open questions for next run
-- Did the reject loop ever trigger? (read room.json)
-- How much Pro quota did one small stage use?
+## Room log analysis (toy-e2-run1.json, full scope, 523 events)
+- Wall time 21:06→21:33 UTC = **27 min**. 17 text messages: coordinator 10, engineer 4, verifier 2, analyst 1.
+- Work distribution by tool calls: analyst 66, engineer 64, verifier 39, coordinator 28 → well distributed. ✅
+- Mention edges both directions: coordinator⇄engineer, coordinator⇄verifier, engineer⇄verifier, analyst→coordinator. Gate 2 ✅
+- Skills used: analyst requirements-extraction + spec-to-tests; engineer concurrency-safety + offline-container;
+  verifier verify-gate. (ui-states and stage-advance not needed yet.) ✅
+- No permission denials. 6 tool errors, all self-recovered: engineer tried pip install on host Python 3.14
+  (pydantic-core wheel build fails) before relying on Docker; stale `git rm` pathspec; verifier Read on a dir;
+  coordinator's first message without a mention was rejected by Band CLI.
+- Reject loop: **did not trigger** (verifier ACCEPT first time). Fine per rules; real tracks will exercise it.
+- `harness check` on toy-e2 with room.json: only README.md + FACTORY.md missing → gates 1, 2, 4 pass. ✅
+- Coordinator mentioned the human twice (ack + final report).
+
+## Improvements queued (apply after toy stage 2)
+- Coordinator: address the human only in the final report.
+- Engineer: note that host Python may differ from the container's; verify inside the container image.
