@@ -29,7 +29,16 @@ for f in files:
         for kind, term in vocabulary.terms_in(line):
             strict.append(f"warn (not banned, review): {f.name}:{n} {kind} `{term}`")
 
-print(f"{len(files)} mandate(s) in {folder}")
+# Skills are standing instructions too: hold them to the organizers' banned list.
+skills_dir = folder.parent / "skills"
+distinctive = set(vocabulary.for_track(track))
+for f in sorted(skills_dir.glob("*/SKILL.md")):
+    for n, line in enumerate(f.read_text().splitlines(), 1):
+        for kind, term in vocabulary.terms_in(line):
+            if term in distinctive:
+                official.append(f"skill {f.parent.name}:{n} names the {track} {kind} `{term}`")
+
+print(f"{len(files)} mandate(s) in {folder}; skills scanned in {skills_dir}")
 for p in official:
     print("OFFICIAL", p)
 for p in strict:

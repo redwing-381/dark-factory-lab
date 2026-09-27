@@ -61,9 +61,9 @@ Track detail + stack choice go in `dispatch/stage-N.md` (e.g. single container, 
 server-served UI, no runtime network, 2 vCPU/2 GiB).
 
 ## 3. Phases & calendar (tick in PLAN.md, log in PROGRESS.md)
-- [ ] **P0 Sep 28** — workshop repo + environment (section 1).
-- [ ] **P1 Sep 28–29** — write 4 generic mandates, handoff template, dispatch texts; `vocab-lint.sh` clean.
-- [ ] **P2 Sep 29** — toy rehearsal: E1 = 3 seats (sample mandates), E2 = our 4 seats. Full loop incl. room.json download +
+- [x] **P0 Sep 28** — workshop repo + environment (section 1). Pushed to private github.com/redwing-381/dark-factory-lab.
+- [x] **P1 Sep 28** — 4 generic mandates, 7 generic skills (`skills/`, D7), handoff template, job template + `make-dispatch.sh`, `new-run.sh`; `vocab-lint.sh` clean vs both tracks.
+- [ ] **P2 Sep 29** — toy rehearsal: E2 = our 4 seats in run `toy-e2` (E1 with sample mandates skipped to save Pro quota, D11). Full loop incl. room.json download +
   `harness check` on toy-result. Measure duration + Pro usage %.
 - [ ] **P3 Sep 30–Oct 1** — tablekeeper practice runs, stage 1 → 4 (human may intervene). After each run: log failure modes in
   experiments/, fix *mandates/dispatch only*, never code. Measure usage per stage to schedule the judged run.

@@ -12,3 +12,5 @@
 | R8 | Seats ask the human questions during judged run | Autonomy score loss | Medium | Coordinator mandate: decide from requirements, record blockers, never ask | open |
 | R9 | Stage folder copied with nested `.git` | Folder arrives empty for judges | Low | Coordinator mandate deletes it; fresh-clone check before submit | open |
 | R10 | Time: full 4-stage run takes longer than expected | Miss deadline | Medium | Judged run starts Oct 2 with Oct 3 buffer; submit Oct 4 | open |
+| R11 | Headless seats stall on tool permission prompts (git, docker, file edits) during an unattended run | Autonomy loss / stall | Medium | Learn Band Desktop seat permission settings in toy run; consider Docker Sandbox per guide | open |
+| R12 | Seats don't load project skills from `.claude/skills` in headless mode | Skills unused | Medium | Verify in toy run (look for skill use in room tool calls); fallback: inline key steps into mandates | open |

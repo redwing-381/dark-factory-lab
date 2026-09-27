@@ -12,3 +12,16 @@ Newest entry at the bottom. Format: **Done / Result / Usage / Next**.
 - **Usage:** n/a
 - **Next:** push this repo to private GitHub (needs `gh auth login`), then P1 — write the 4 generic mandates
   + handoff template + dispatch texts, run `scripts/vocab-lint.sh`.
+
+## 2026-09-28 — P1 factory v1 written
+- **Done:** `mandates/` coordinator, analyst, engineer, verifier (generic, Harness/Model lines).
+  `skills/` requirements-extraction, spec-to-tests, concurrency-safety, offline-container, ui-states,
+  verify-gate, stage-advance. `dispatch/job-template.md` + `scripts/make-dispatch.sh` (inlines spec,
+  copies to clipboard). `scripts/new-run.sh` (fresh result repo with mandates + `.claude/skills`).
+  Lint extended to skills. Decisions D7–D11, risks R11–R12.
+- **Result:** vocab-lint: 0 official findings vs tablekeeper and pocketful lists. Run `toy-e2` created
+  at `~/dark-factory/band-work/toy-e2` (scaffold in stage-1). Toy stage-1 job message generated.
+- **Usage:** n/a
+- **Next:** P2 — user creates 4 seats in Band Desktop (working dir = toy-e2, mandate text as
+  instructions), one room, paste `dispatch/out/toy-e2-stage-1.md`. Observe: skills loaded? permission
+  prompts? handoffs complete? Then stages 2–4, room.json download, `harness check`.
