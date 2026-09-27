@@ -25,3 +25,12 @@ Newest entry at the bottom. Format: **Done / Result / Usage / Next**.
 - **Next:** P2 — user creates 4 seats in Band Desktop (working dir = toy-e2, mandate text as
   instructions), one room, paste `dispatch/out/toy-e2-stage-1.md`. Observe: skills loaded? permission
   prompts? handoffs complete? Then stages 2–4, room.json download, `harness check`.
+
+## 2026-09-28 — P2 toy stage 1 (E2)
+- **Done:** 4 seats created in Band Desktop (Claude Code, sonnet, Auto permissions, working dir toy-e2,
+  mandate as Role file). Fresh room toy-e2-run1, single job message.
+- **Result:** stage 1 accepted by verifier; operator isolated check 8/8, claimed stage 1. ~26 min. See
+  experiments/E2-toy-stage1.md.
+- **Usage:** TODO
+- **Next:** download room.json → inspect handoffs/reject loop; note Pro usage %; dispatch toy stage 2
+  (`scripts/make-dispatch.sh toy 2 toy-e2`) in the same room.
