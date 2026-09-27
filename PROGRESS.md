@@ -40,5 +40,5 @@ Newest entry at the bottom. Format: **Done / Result / Usage / Next**.
   final report; engineer must invoke matching skills (ui-states) and judge inside the image.
 - **Result:** operator isolated --all: stage 1 and 2 both claim 100%. Verifier caught a real test bug → fixed via room.
 - **Usage:** 04:05 IST — session 11% (resets 08:40), **weekly 99%** (resets 10:30). Weekly cap is the binding limit; operator Opus chat shares it.
-- **Next:** user updates Role of coordinator + engineer in Band from dark-factory-lab/mandates; toy stage 3
+- **Next (after 10:30 IST weekly reset, D15):** user updates Role of coordinator + engineer; note weekly %; tablekeeper stage-1 practice (skip toy stage 3)
   (concurrency) to validate v1.1; then tablekeeper stage-1 practice run.
