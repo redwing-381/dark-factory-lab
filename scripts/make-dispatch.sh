@@ -14,10 +14,18 @@ spec="$KIT/$track/spec/stage-$stage.md"
 
 out="$LAB/dispatch/out/$run-stage-$stage.md"; mkdir -p "$(dirname "$out")"
 prev=$((stage - 1))
+if [[ "$stage" == 1 ]]; then
+  starting="- The work folder already exists (it may hold a minimal starter). Build the stage there."
+else
+  starting="- The work folder does not exist yet. Create it as a copy of the accepted stage-$prev folder
+  (stage-advance procedure), then extend the copy. Never edit stage-$prev.
+- Carry the stage-$prev checklist and acceptance tests forward and add the new items."
+fi
 {
+  STARTING="$starting" awk '{ if ($0 == "{{STARTING_POINT}}") print ENVIRON["STARTING"]; else print }' "$LAB/dispatch/job-template.md" |
   sed -e "s|{{TRACK}}|$track|g" -e "s|{{STAGE}}|$stage|g" -e "s|{{PREV}}|$prev|g" \
       -e "s|{{REPO}}|$repo|g" -e "s|{{KIT}}|$KIT|g" -e "s|{{SPEC}}|$spec|g" \
-      "$LAB/dispatch/job-template.md"
+      -e "s|{{CHECKS}}|$HOME/dark-factory/band-work/checks|g"
   echo
   echo "===== BEGIN COMPLETE REQUIREMENTS: $track stage $stage ====="
   cat "$spec"

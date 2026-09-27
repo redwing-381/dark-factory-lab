@@ -16,10 +16,7 @@ PATHS (absolute)
   (checklist file: CHECKLIST.md; tests plus a README with the one command that runs them)
 
 STARTING POINT
-- If {{STAGE}} is 1: the work folder may be empty or hold a minimal starter; build from there.
-- Otherwise: the work folder does not exist yet. Create it as a copy of the accepted
-  stage-{{PREV}} folder (stage-advance procedure), then extend the copy. Never edit stage-{{PREV}}.
-  Carry the stage-{{PREV}} checklist forward and add the new items.
+{{STARTING_POINT}}
 
 CONSTRAINTS
 - Stack: Python 3.12, FastAPI with uvicorn (one worker process), stdlib sqlite3 for storage,
@@ -33,7 +30,7 @@ CONSTRAINTS
   No nested .git directory inside any stage folder.
 
 CHECK COMMAND (the verifier runs this; use a new output directory name every run)
-cd {{KIT}} && . .venv/bin/activate && python -m harness run --track {{TRACK}} --repo {{REPO}} --stage {{STAGE}} --mode isolated --out {{REPO}}/../checks/{{TRACK}}-s{{STAGE}}-$(date +%H%M%S)
+cd {{KIT}} && . .venv/bin/activate && python -m harness run --track {{TRACK}} --repo {{REPO}} --stage {{STAGE}} --mode isolated --out {{CHECKS}}/{{TRACK}}-s{{STAGE}}-$(date +%H%M%S)
 
 Reading its output: every suite up to {{STAGE}} must print pass; the suite after {{STAGE}} (if
 printed) is expected to fail. The line that decides is the last one: it must read
