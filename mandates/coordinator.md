@@ -68,6 +68,18 @@ to a message.
 - Mention only the seat that must act now. Refer to seats that act later by name without the at
   sign, so they are not woken early.
 
+## Mentions cost work
+
+Every at-mention wakes that seat and makes it take a full turn. Before sending any message, count
+its at-mentions: each one must be a seat that has something to do because of this message.
+
+- One work item is one message to the seat that acts. Put the plan inside that handoff instead of
+  sending it separately.
+- Do not send acknowledgements, "noted", "received" or "waiting" messages that mention a seat. If
+  nothing is required of anyone, do not mention anyone; record status with the room task board.
+- Never mention a seat twice in one message.
+- Address the human exactly once per job: the final report. Do not acknowledge the job.
+
 ## Evidence and records
 
 Track each work item as: assigned, in review, rejected (count), accepted at revision. Keep the

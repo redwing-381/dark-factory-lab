@@ -33,3 +33,21 @@
 ## Improvements queued (apply after toy stage 2)
 - Coordinator: address the human only in the final report.
 - Engineer: note that host Python may differ from the container's; verify inside the container image.
+
+---
+# E2 continued — toy stage 2 (same room, same repo)
+- 21:43→22:20 UTC = **37 min**. Operator isolated `--all`: stage-1/ claims 1 (100%), stage-2/ claims 2 (100%).
+- stage-1/ byte-identical to its accepted revision a7078db (stage-advance worked; coordinator used the skill).
+- Commits: coordinator 382e9fb (advance), analyst 9e788eb (42-item checklist, Playwright page tests),
+  engineer ede818c (page), analyst 84b0782 (test fix). Tool calls: analyst 80, coordinator 58, engineer 45, verifier 34.
+- **Review changed the work:** verifier found a hard-coded container name leaking in the analyst's container test;
+  coordinator routed a fix request to the analyst; fixed at 84b0782; whole-step ACCEPT after. ✅ teamwork evidence.
+
+## Problems → fixed in factory v1.1
+1. Mention noise: coordinator mentioned engineer in plan + handoff + "received" (3 wakes), and cc'd verifier twice in
+   the engineer handoff. Engineer took a stale turn ("waiting on the handoff") after finishing. → coordinator mandate:
+   new "Mentions cost work" section (plan inside handoff, no ack mentions, no double mentions).
+2. Engineer did not invoke ui-states for the page. → engineer mandate: invoke every matching skill per work item,
+   name the applied skills in the handoff.
+3. Coordinator acknowledged the job to the human. → address the human once: the final report.
+4. Engineer host-Python confusion (stage 1). → engineer mandate: judge behaviour inside the built image.

@@ -34,3 +34,11 @@ Newest entry at the bottom. Format: **Done / Result / Usage / Next**.
 - **Usage:** TODO
 - **Next:** download room.json → inspect handoffs/reject loop; note Pro usage %; dispatch toy stage 2
   (`scripts/make-dispatch.sh toy 2 toy-e2`) in the same room.
+
+## 2026-09-28 — P2 toy stage 2 + factory v1.1
+- **Done:** toy stage 2 in the same room (37 min). Mandates v1.1: coordinator mention discipline + human only in
+  final report; engineer must invoke matching skills (ui-states) and judge inside the image.
+- **Result:** operator isolated --all: stage 1 and 2 both claim 100%. Verifier caught a real test bug → fixed via room.
+- **Usage:** TODO (user to report Pro %)
+- **Next:** user updates Role of coordinator + engineer in Band from dark-factory-lab/mandates; toy stage 3
+  (concurrency) to validate v1.1; then tablekeeper stage-1 practice run.

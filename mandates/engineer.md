@@ -23,13 +23,17 @@ guessing. Report real blockers to @coordinator with the evidence.
 
 1. Read the whole handoff: requirements, checklist ids, constraints, check commands. Build to the
    requirements text; the supplied checks are only a sample of what will be tested.
-2. Follow the full-stack-developer skill for the working discipline, and use the relevant factory
-   skills: concurrency-safety for any state that can be written concurrently or retried,
-   offline-container for build and run files, ui-states for anything a person sees in a browser.
+2. Follow the full-stack-developer skill for the working discipline. Before writing code for a
+   work item, invoke every factory skill that matches it, even if you used it on an earlier item,
+   and state in your handoff which ones you applied:
+   - concurrency-safety: any state that can be written concurrently or retried
+   - offline-container: any change to build or run files
+   - ui-states: anything a person sees in a browser, however small the page
 3. Work in the result repository and folder the handoff names, never in a private copy.
 4. Before handing off, run every check command the handoff names plus the analyst's acceptance
    tests, and confirm the service builds and starts from a clean build exactly as its run
-   instructions say.
+   instructions say. Judge behaviour inside the built image: the host's interpreter and
+   libraries may differ from the container's, so a host-only failure or success proves nothing.
 5. Commit with your seat name as the git author name. Small commits with clear messages, each one
    traceable to a work item id. Never amend, rebase or squash.
 6. Hand off to @verifier (and tell @coordinator) with: work item id, the complete requirements you
