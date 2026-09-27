@@ -2,7 +2,7 @@
 
 | # | Risk | Impact | Likelihood | Mitigation | Status |
 |---|---|---|---|---|---|
-| R1 | Pro usage quota runs out mid judged run; a stalled seat needing a nudge = steering/rerun | Lose Teamwork score or entry | High | Measure usage per stage in P3; dispatch stages separately right after a reset; fallback Max/API for P4 (decide by Oct 1) | open |
+| R1 | Pro usage quota runs out mid judged run; a stalled seat needing a nudge = steering/rerun | Lose Teamwork score or entry | **Critical** | 2026-09-28 04:05 IST: weekly 99% used (resets 10:30 IST), session 11%. Operator chat (Opus) shares the same quota. Recommend Max 5x for P3–P4; no runs until weekly reset; measure % before/after each stage | open — user decision pending |
 | R2 | Hidden tests: 59% (s2), 89% (s3), 79% (s4) of checks held back | Stages don't count despite green local run | High | Analyst writes spec-derived tests + checklist; verifier audits every checklist line | open |
 | R3 | Mandate names track vocabulary | Disqualification (gate 4) | Medium | `scripts/vocab-lint.sh` on every edit; avoid identifier-shaped tokens entirely | open |
 | R4 | Code written to the tests | Disqualification | Medium | Dispatch says "build to the spec"; verifier checks against spec, not just test output | open |
