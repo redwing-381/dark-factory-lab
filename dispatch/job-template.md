@@ -1,4 +1,4 @@
-@coordinator JOB: {{TRACK}} stage {{STAGE}}
+JOB: {{TRACK}} stage {{STAGE}}
 
 This is a dark-factory run. This message is the only human input for this job. Do not ask me
 anything and do not wait for me; decide from the requirements and record decisions in the room.
