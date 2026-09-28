@@ -42,3 +42,9 @@ Newest entry at the bottom. Format: **Done / Result / Usage / Next**.
 - **Usage:** 04:05 IST — session 11% (resets 08:40), **weekly 99%** (resets 10:30). Weekly cap is the binding limit; operator Opus chat shares it.
 - **Next (after 10:30 IST weekly reset, D15):** user updates Role of coordinator + engineer; note weekly %; tablekeeper stage-1 practice (skip toy stage 3)
   (concurrency) to validate v1.1; then tablekeeper stage-1 practice run.
+
+## 2026-09-29 — P3 tablekeeper stage 1 practice (E3)
+- **Done:** tk-p1 run, 4 seats v1.1. Session limit hit mid-stage; human RESUME after reset.
+- **Result:** 120/120 shipped stage-1 checks, claimed stage 1 (isolated). See experiments/E3-tablekeeper-stage1.md.
+- **Usage:** before weekly 16% / session 25%. After: TODO
+- **Next:** get weekly % → compute per-stage cost → redesign for Pro (fit a stage in one 5-hour window).
