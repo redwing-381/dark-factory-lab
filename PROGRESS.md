@@ -46,5 +46,5 @@ Newest entry at the bottom. Format: **Done / Result / Usage / Next**.
 ## 2026-09-29 — P3 tablekeeper stage 1 practice (E3)
 - **Done:** tk-p1 run, 4 seats v1.1. Session limit hit mid-stage; human RESUME after reset.
 - **Result:** 120/120 shipped stage-1 checks, claimed stage 1 (isolated). See experiments/E3-tablekeeper-stage1.md.
-- **Usage:** before weekly 16% / session 25%. After: TODO
+- **Usage:** weekly 16%→30% (14% per stage 1); ≈1.25 five-hour windows. Weekly budget ≈ 9 windows.
 - **Next:** get weekly % → compute per-stage cost → redesign for Pro (fit a stage in one 5-hour window).

@@ -2,7 +2,7 @@
 
 - **Date:** 2026-09-28 ~21:30 IST dispatch → 2026-09-29 00:40 IST whole-stage ACCEPT
 - **Room:** tk-p1-run1 · **Repo:** band-work/tk-p1
-- **Usage before:** weekly 16%, session 25% (resets 23:10). **After:** TODO
+- **Usage:** weekly 16% → 30% (**14% for stage 1**, incl. operator chat). Session: 25%→100% (limit) + 0%→50% in the next window ≈ **1.25 session windows**.
 
 ## Result
 - Operator isolated check: **120/120 shipped stage-1 checks**, `claimed stage: 1`, stage-2 probe fails (correct).
