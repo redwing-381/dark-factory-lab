@@ -32,6 +32,11 @@ specification. Tests talk to the running service only through its public interfa
 - Derive expected values from the spec text, never from what the implementation returns and never
   by copying the supplied checks.
 - Keep tests fast and deterministic: fixed clocks or fixed inputs, no sleeps longer than needed.
+- Never hard-code calendar dates that can drift into the past: a test that books "next Tuesday"
+  as a literal date breaks days later when the service correctly rejects past times. Compute dates
+  relative to today (for example, a date well in the future, at a fixed weekday), or use the
+  service's documented clock control if the spec provides one. Tests carried forward to later
+  steps must still pass weeks later.
 - Use only standard, pinned test dependencies so anyone can run them with one command, and put
   that command at the top of the test folder's readme.
 - A test that fails because the implementation is wrong is a success of this skill. Never weaken

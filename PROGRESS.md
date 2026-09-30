@@ -48,3 +48,10 @@ Newest entry at the bottom. Format: **Done / Result / Usage / Next**.
 - **Result:** 120/120 shipped stage-1 checks, claimed stage 1 (isolated). See experiments/E3-tablekeeper-stage1.md.
 - **Usage:** weekly 16%→30% (14% per stage 1); ≈1.25 five-hour windows. Weekly budget ≈ 9 windows.
 - **Next:** get weekly % → compute per-stage cost → redesign for Pro (fit a stage in one 5-hour window).
+
+## 2026-10-01 — P3 tablekeeper stage 2 practice (in progress)
+- **Done:** stage 2 dispatched Sep 29 ~02:15 IST in tk-p1-run1. Coordinator advanced stage-1→stage-2 (5128e6d);
+  analyst checklist 49 KB + 8 UI test files (c578c56), fixed stale hard-coded dates (68a0575). Usage limit hit before
+  the engineer started. RESUME sent Oct 1 ~04:35 IST.
+- **Factory fix:** spec-to-tests skill — never hard-code calendar dates that drift into the past (workshop copy only).
+- **Next:** wait for final report → operator isolated check + open UI in browser, screenshot, judge App quality.
