@@ -32,6 +32,20 @@ uncertain outcome (a request whose response was lost: tell the user, then reconc
 state back instead of blindly retrying). Disable submit while a request is in flight so a double
 click cannot send twice; send an idempotency key when the API supports one and reuse it on retry.
 
+## Flow rules (found missing in practice runs)
+
+- **Visible feedback for every click.** When a choice opens the next step (a form, a details
+  panel), bring it into view and move focus to its first field, and mark the chosen option as
+  selected. A step that appears off-screen looks like nothing happened.
+- **Keep intent across sign-in.** If a signed-out user starts an action that needs an account,
+  return them after sign-in to exactly where they were, with their choices still filled in.
+- **Refresh after every write.** After a successful create, change or cancel, re-read the affected
+  data so lists, grids and counts show the new state immediately.
+- **Confirmation is a page, not a hint.** After a successful action, show a clear heading saying
+  what happened, every value labelled (what, where, when, reference), and the obvious next actions.
+- **Labels carry meaning.** Buttons and options say what they are (for example a resource's name
+  and its capacity), not just an internal number.
+
 ## Polish that judges notice
 
 Clear page titles, visible focus rings, helpful empty-state text, human-readable dates and times

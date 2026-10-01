@@ -55,3 +55,8 @@ Newest entry at the bottom. Format: **Done / Result / Usage / Next**.
   the engineer started. RESUME sent Oct 1 ~04:35 IST.
 - **Factory fix:** spec-to-tests skill — never hard-code calendar dates that drift into the past (workshop copy only).
 - **Next:** wait for final report → operator isolated check + open UI in browser, screenshot, judge App quality.
+
+## 2026-10-01 — P3 tablekeeper stage 2 practice done (E4)
+- **Result:** stage-2 claims stage 2 (25/25 + 120/120), stage-1 intact. Manual UI review found 5 UX flaws.
+- **Factory fix:** ui-states skill "Flow rules"; spec-to-tests no drifting dates; R13 restart rule.
+- **Next:** judged run (fresh repo `result`, fresh room) per D15 — stages 1–2 Oct 3–4, stages 3–4 from Oct 5 10:30 IST.
